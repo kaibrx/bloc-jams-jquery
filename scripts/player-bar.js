@@ -2,7 +2,6 @@
   $('button#play-pause').on('click', function() {
     helper.playPauseAndUpdate();
     $(this).attr('playState', player.playState);
-    $('#time-control .total-time').text( duration );
   });
 
 
@@ -15,7 +14,7 @@
 
      const nextSong = album.songs[nextSongIndex];
      helper.playPauseAndUpdate(nextSong);
-     $('#time-control .total-time').text( duration );
+
    });
 
    $('button#previous').on('click', function() {
@@ -27,7 +26,7 @@
 
      const nextSong = album.songs[nextSongIndex];
      helper.playPauseAndUpdate(nextSong);
-     $('#time-control .total-time').text( duration );
+
    });
 
    $('#time-control input').on('input', function (event) {
