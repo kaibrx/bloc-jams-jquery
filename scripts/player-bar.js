@@ -22,7 +22,7 @@
 
      const currentSongIndex = album.songs.indexOf(player.currentlyPlaying);
      const nextSongIndex = currentSongIndex - 1;
-     if (nextSongIndex >= album.songs.length) { return; }
+     if (nextSongIndex < 0) { return; }
 
      const nextSong = album.songs[nextSongIndex];
      helper.playPauseAndUpdate(nextSong);
